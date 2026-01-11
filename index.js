@@ -56,3 +56,42 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   ((n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2) && 
   !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
   (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
+
+
+
+// IMPLEMENT THE FOLLOWING:
+// Check if all numbers are divisible by 5. Cache the result in a variable.
+const isDivisibleBy5 = (n1 % 5 === 0) && (n2 % 5 === 0) && (n3 % 5 === 0) && (n4 % 5 === 0);
+console.log(isDivisibleBy5);
+
+
+// Check if the first number is larger than the last. Cache the result in a variable.  
+const isFirstLarger = n1 > n4;
+console.log(isFirstLarger);
+
+
+
+// Accomplish the following arithmetic chain:  
+// Subtract the first number from the second number. 
+const subtract = n2 - n1;
+console.log(subtract);
+
+
+// Multiply the result by the third number. 
+const multiply = subtract * n3;
+console.log(multiply);
+
+
+// Find the remainder of dividing the result by the fourth number.  
+const remainder = multiply % n4;
+console.log(remainder);
+
+// Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. 
+// Rename the variable as appropriate.  
+let score = 20;
+
+
+const is25OrLess = score <= 25;
+if (is25OrLess) {
+  console.log("The score is 25 or less.");
+}
