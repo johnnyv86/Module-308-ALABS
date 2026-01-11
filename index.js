@@ -115,3 +115,102 @@ if (is25OrLess) {
     // This runs if is25OrLess is false
     console.log(`Result: The score of ${score} is over the limit.`);
 }
+
+
+/* SECTION TWO - PRACTICAL MATH SCENARIO 
+You are planning a cross-country road trip! */
+
+// - The distance of the trip, in total, is 1,500 miles.  
+const totalDistance = 1500; //miles
+
+// - You have a fuel budget of $175. 
+const fuelBudget = 175; // dollars
+
+// - The average cost of fuel is $3 per gallon. 
+const fuelCost = 3; // dollars per gallon
+
+/* Your car’s fuel efficiency is as follows:*/
+// - At 55 miles per hour, you get 30 miles per gallon.  
+const mpgAt55 = 30;
+
+// - At 60 miles per hour, you get 28 miles per gallon.  
+const mpgAt60 = 28;
+
+// - At 75 miles per hour, you get 23 miles per gallon. 
+const mpgAt75 = 23;
+
+/* Set up a program to answer the following questions:
+- How many gallons of fuel will you need for the entire trip? */
+const gallonsAt55 = totalDistance / mpgAt55;
+console.log(`At 55mph, you will need ${gallonsAt55} gallons of fuel`);
+
+const gallonsAt60 = totalDistance / mpgAt60;
+console.log(`At 60mph, you will need ${gallonsAt60} gallons of fuel.`);
+
+const gallonsAt75 = totalDistance / mpgAt75;
+console.log(`At 75mph, you will need ${gallonsAt75} gallons of fuel.`);
+
+// - Will your budget be enough to cover the fuel expense?  
+const costAt55 = gallonsAt55 * fuelCost;
+const isBudgetEnough55 = costAt55 <= fuelBudget;
+console.log(`At 55mph, the total cost is $${costAt55}.`); 
+console.log(`Budget enough? ${isBudgetEnough55}`);
+
+const costAt60 = gallonsAt60 * fuelCost;
+const isBudgetEnough60 = costAt60 <= fuelBudget;
+console.log(`At 60mph, the total cost is $${costAt60}.`); 
+console.log(`Budget enough? ${isBudgetEnough60}`);
+
+const costAt75 = gallonsAt75 * fuelCost;
+const isBudgetEnough75 = costAt75 <= fuelBudget;
+console.log(`At 75mph, the total cost is $${costAt75}.`);
+console.log(`Budget enough? ${isBudgetEnough75}`);
+
+
+// - How long will the trip take, in hours?  
+const timeAt55 = totalDistance / 55;
+console.log(`At 55mph, the trip will take approximately ${timeAt55} hours.`);
+
+const timeAt60 = totalDistance / 60;
+console.log(`At 60mph, the trip will take approximately ${timeAt60} hours.`);
+
+const timeAt75 = totalDistance / 75;
+console.log(`At 75mph, the trip will take approximately ${timeAt75} hours.`);
+
+
+// Compare the results when traveling at an average of 55 miles per hour. 
+console.log(`At 55mph, you will need ${gallonsAt55} gallons of fuel`);
+console.log(`At 55mph, the total cost is $${costAt55}.`); 
+console.log(`Budget enough? ${isBudgetEnough55}`);
+console.log(`At 55mph, the trip will take approximately ${timeAt55} hours.`);
+
+
+// Compare the results when traveling at an average of 60 miles per hour. 
+console.log(`At 60mph, you will need ${gallonsAt60} gallons of fuel.`);
+console.log(`At 60mph, the total cost is $${costAt60}.`); 
+console.log(`Budget enough? ${isBudgetEnough60}`);
+console.log(`At 60mph, the trip will take approximately ${timeAt60} hours.`);
+
+
+// Compare the results when traveling at an average of 75 miles per hour. 
+console.log(`At 75mph, you will need ${gallonsAt75} gallons of fuel.`);
+console.log(`At 75mph, the total cost is $${costAt75}.`);
+console.log(`Budget enough? ${isBudgetEnough75}`);
+console.log(`At 75mph, the trip will take approximately ${timeAt75} hours.`);
+
+// Which makes the most sense for the trip?  
+/* Compare the results when traveling at an average of 55, 60, and 75 miles per hour. 
+Which makes the most sense for the trip? */
+console.log(`Result Comparison:`);
+console.log(`- 55mph: $${costAt55} (Within Budget), ${timeAt55} hours.`);
+console.log(`- 60mph: $${costAt60} (Within Budget), ${timeAt60} hoours`);
+console.log(`- 75mph: $${costAt75} (Over Budget), ${timeAt75} hours`);
+
+if (isBudgetEnough75) {
+    console.log("Recommendation: Drive 75mph. It's the fastest and fits the budget.");
+  } else if (isBudgetEnough60) {
+    console.log("Recommendation: Drive 60mph. It's a good balance of speed and cost.");
+  } else {
+    console.log("Recommendation: Drive 55mph. It's the only option within budget.");
+  }
+
